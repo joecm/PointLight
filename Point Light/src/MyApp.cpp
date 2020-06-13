@@ -113,6 +113,14 @@ void MyApp::createScene() {
 	node4->setPosition(20, 20, 20);
 	node4->attachObject(LightEnt2);
 
+	Ogre::Entity* ent1 = _sceneManager->createEntity("MiBote", "Spray.mesh");
+	Ogre::SceneNode* node5 = _sceneManager->getRootSceneNode()->createChildSceneNode("node5");
+	node5->setPosition(0.0f, 0.0f, 15.0f);
+	node5->pitch(Ogre::Degree(90));
+	node5->roll(Ogre::Degree(-45));
+	node5->attachObject(ent1);
+
+
 	// _sceneManager->setDisplaySceneNodes(true);
 }
 
